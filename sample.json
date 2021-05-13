@@ -1,0 +1,32 @@
+{
+  "1234": {
+    "name": "Steven",
+    "email": "s@sh.com",
+    "newsletter": true,
+    "lastSeen": 12348979
+  },
+  "1233": {
+    "name": "Adam",
+    "email": "s@sh.com",
+    "newsletter": true,
+    "lastSeen": 12348979
+  },
+  "1232": {
+    "name": "Brantley",
+    "email": "s@sh.com",
+    "newsletter": false,
+    "lastSeen": 12348979
+  },
+  "1231": {
+    "name": "Jermey",
+    "email": "s@sh.com",
+    "newsletter": true,
+    "lastSeen": 12348979
+  },
+  "1230": {
+    "name": "William",
+    "email": "s@sh.com",
+    "newsletter": false,
+    "lastSeen": 12348979
+  }
+}
