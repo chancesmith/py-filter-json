@@ -14,7 +14,7 @@ print(outputPath)
 
 ## fetch the json file
 contents = Path(jsonFilePath).read_text()
-print(contents)
+# print(contents)
 
 ## json.loads() contents of json file
 jsonData = json.loads(contents)
@@ -23,11 +23,12 @@ jsonData = json.loads(contents)
 filteredUsersList = []
 
 for id, user in jsonData.items():
-  if user["newsletter"] == True:
-    ## trim fields on json to: name, email, newsletter
-    newUser = dict(name=user["name"], email=user["email"],
-                   newsletter=user["newsletter"])
-    filteredUsersList.append(newUser)
+  if "newsletter" in user:
+    if user["newsletter"] == True:
+      ## trim fields on json to: name, email, newsletter
+      newUser = dict(id=id, name=user["name"], email=user["email"],
+                     newsletter=user["newsletter"])
+      filteredUsersList.append(newUser)
 
 ## let user check data
 print(filteredUsersList)
@@ -35,6 +36,8 @@ print(filteredUsersList)
 ## create file at arg 2
 with open(outputPath, 'w') as csvfile:
   writer = csv.DictWriter(
-      csvfile, fieldnames=('name', 'email', 'newsletter'))
+      csvfile, fieldnames=('id', 'name', 'email', 'newsletter'))
   writer.writeheader()
   writer.writerows(filteredUsersList)
+
+print(len(jsonData.items()))

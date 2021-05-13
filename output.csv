@@ -1,4 +1,4 @@
-name,email,newsletter
-Steven,s@sh.com,True
-Adam,s@sh.com,True
-Jermey,s@sh.com,True
+id,name,email,newsletter
+1234,Steven,s@sh.com,True
+1233,Adam,s@sh.com,True
+1231,Jermey,s@sh.com,True
